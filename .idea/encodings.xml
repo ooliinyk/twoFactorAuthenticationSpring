@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/Application.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/Test.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/authorization/TOTP/TimeBasedOneTimePassword.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/authorization/TOTP/VerificationCodeException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/authorization/extensions/UserDetailsAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/authorization/extensions/UserDetailsServiceAdapter.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/authorization/twilio/SendSMS_Twilio.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/configuration/HibernateConfiguration.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/configuration/SecurityConfiguration.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/configuration/SecurityWebApplicationInitializer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/configuration/WebMvcConfig.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/controller/VerificationCodeController.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/dao/AbstractDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/dao/RoleDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/dao/RoleDaoImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/dao/UserDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/dao/UserDaoImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/entity/Role.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/entity/RoleTypes.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/entity/User.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/app/common/entity/UserInfo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/application.properties" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/sql.sql" charset="windows-1251" />
+  </component>
+</project>
