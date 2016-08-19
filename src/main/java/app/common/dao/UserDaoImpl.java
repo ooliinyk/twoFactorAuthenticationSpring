@@ -23,7 +23,7 @@ public class UserDaoImpl extends AbstractDao<Long, User> implements UserDao {
 
     public List<User> findAll() {
         Criteria criteria = createEntityCriteria();
-        criteria.addOrder(Order.asc("login"));
+        criteria.addOrder(Order.asc("id"));
         return (List<User>) criteria.list();
     }
 

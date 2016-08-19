@@ -42,7 +42,7 @@ public class UserDaoTest extends AbstractTest {
     @Test
     public void testFindbyLogin() {
 
-        User user= userDao.findByLogin("user");
+        User user = userDao.findByLogin("user");
 
         Assert.assertNotNull("failure - expected not null", user);
         assertThat(user.getLogin()).isEqualTo("user");
