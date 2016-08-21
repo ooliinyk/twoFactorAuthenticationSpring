@@ -7,14 +7,14 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name = "last_visited_accounts")
+@Table(name = "last_visited_accounts1")
 public class LastVisitedAccounts {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "last_visited_accounts_id")
     private long lastVisitedAccountsID;
     @Column(name = "user_id")
-    private int userID;
+    private long userID;
     @Column(name = "account_id")
     private int accountID;
     @Column(name = "order")
@@ -22,15 +22,15 @@ public class LastVisitedAccounts {
 
     @Column(name = "date")
     private Date date;
-    @Column(name = "time")
-    private Date time;
+//    @Column(name = "time")
+//    private Date time;
 
 
-    public int getUserID() {
+    public long getUserID() {
         return userID;
     }
 
-    public void setUserID(int userID) {
+    public void setUserID(long userID) {
         this.userID = userID;
     }
 
@@ -67,13 +67,13 @@ public class LastVisitedAccounts {
         this.lastVisitedAccountsID = lastVisitedAccountsID;
     }
 
-    public Date getTime() {
-        return time;
-    }
-
-    public void setTime(Date time) {
-        this.time = time;
-    }
+//    public Date getTime() {
+//        return time;
+//    }
+//
+//    public void setTime(Date time) {
+//        this.time = time;
+//    }
 
 
     @Override
@@ -84,7 +84,7 @@ public class LastVisitedAccounts {
                 ", accountID=" + accountID +
                 ", order=" + order +
                 ", date=" + date +
-                ", time=" + time +
+//                ", time=" + time +
                 '}';
     }
 }

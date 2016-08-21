@@ -9,5 +9,9 @@ import java.util.List;
  */
 public interface LastVisitedAccountsService {
 
-     List<LastVisitedAccounts> findAll();
+    List<LastVisitedAccounts> findAll();
+
+    List<LastVisitedAccounts> getAllByUserId(long user_id);
+
+    List<Integer> getDistinctByUserId(long user_id);
 }
