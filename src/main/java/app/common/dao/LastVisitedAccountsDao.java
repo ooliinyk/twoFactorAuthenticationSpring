@@ -9,8 +9,14 @@ import java.util.List;
  */
 public interface LastVisitedAccountsDao {
 
-     List<LastVisitedAccounts> findAll();
-     LastVisitedAccounts findById(long id);
-     public List<LastVisitedAccounts> getAllByUserId(long user_id);
-     public List<Integer> getDistinctByUserId(long user_id);
+    void save(LastVisitedAccounts user);
+
+
+    List<LastVisitedAccounts> findAll();
+
+    LastVisitedAccounts findById(long id);
+
+    public List<LastVisitedAccounts> getAllByUserId(long user_id);
+
+    public List<Integer> getDistinctByUserId(long user_id);
 }

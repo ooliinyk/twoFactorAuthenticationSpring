@@ -10,10 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.context.request.RequestContextHolder;
 
 import java.util.ArrayDeque;
@@ -36,7 +33,6 @@ public class LastVisitedAccountsController {
 
 
     @RequestMapping(value = {"/lva"}, method = RequestMethod.GET)
-
     public
     @ResponseBody
     Queue<Integer> getShopInJSON() {
@@ -61,11 +57,6 @@ public class LastVisitedAccountsController {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
         List<LastVisitedAccounts> lastVisitedAccountses = lastVisitedAccountsService.getAllByUserId(userService.findByLogin(auth.getName()).getId());
-//
-//        for(LastVisitedAccounts lastVisitedAccounts:lastVisitedAccountses){
-//            System.out.println(lastVisitedAccounts.toString());
-//
-//        }
 
 
         Queue<Integer> queue = new ArrayDeque<Integer>();
@@ -77,5 +68,36 @@ public class LastVisitedAccountsController {
         return queue;
     }
 
+    @RequestMapping(value = {"/lva2"}, method = RequestMethod.GET)
+    public
+    @ResponseBody
+    List<LastVisitedAccounts> getShopInJSON11() {
+
+//        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+
+        List<LastVisitedAccounts> lastVisitedAccountses = lastVisitedAccountsService.getAllByUserId(userService.findByLogin("user2").getId());
+
+
+        return lastVisitedAccountses;
+    }
+
+
+    @RequestMapping(value = {"/post"}, method = RequestMethod.POST)
+//    @Consumes("application/json")
+    public     @ResponseBody  LastVisitedAccounts verifyCode( @RequestBody LastVisitedAccounts lastVisitedAccounts) {
+
+        System.out.println(lastVisitedAccounts.toString());
+
+        return lastVisitedAccounts;
+    }
+//    @POST
+//    @Path("/post")
+//    @Consumes("application/json")
+//    public Response createProductInJSON(Product product) {
+//
+//        String result = "Product created : " + product;
+//        return Response.status(201).entity(result).build();
+//
+//    }
 
 }

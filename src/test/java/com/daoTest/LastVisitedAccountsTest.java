@@ -25,7 +25,7 @@ public class LastVisitedAccountsTest extends AbstractTest {
     @Autowired
     UserDao userDao;
 
-    @Test
+//    @Test
     public void test() {
 
         List<LastVisitedAccounts> lastVisitedAccountses = lastVisitedAccountsDao.findAll();

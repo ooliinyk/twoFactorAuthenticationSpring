@@ -1,4 +1,4 @@
-package com.daoTests;
+package com.daoTest;
 
 import com.AbstractTest;
 import app.common.dao.UserDao;
@@ -27,7 +27,7 @@ public class UserDaoTest extends AbstractTest {
     @Autowired
     private UserDao userDao;
 
-    @Test
+//    @Test
     public void testFindAll() {
 
         List<User> list = userDao.findAll();
@@ -39,7 +39,7 @@ public class UserDaoTest extends AbstractTest {
     }
 
 
-    @Test
+//    @Test
     public void testFindbyLogin() {
 
         User user = userDao.findByLogin("user");

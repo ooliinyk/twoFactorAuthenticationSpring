@@ -45,6 +45,8 @@ public class VerificationCodeController {
     }
 
     private void grantAuthority() {
+
+
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>(auth.getAuthorities());
         authorities.add(new SimpleGrantedAuthority("ROLE_USER"));

@@ -19,6 +19,10 @@ import java.util.*;
 public class LastVisitedAccountsDaoImpl extends AbstractDao<Long, LastVisitedAccounts> implements LastVisitedAccountsDao {
 
 
+    public void save(LastVisitedAccounts lastVisitedAccounts) {
+        persist(lastVisitedAccounts);
+    }
+
     public List<LastVisitedAccounts> findAll() {
         Criteria criteria = createEntityCriteria();
         criteria.addOrder(Order.asc("lastVisitedAccountsID"));
